@@ -6,13 +6,13 @@ import React from 'react';
 function MainPage(){
     const [products, setProducts] = React.useState([]);
     React.useEffect(function(){
-        axios.get("https://341cf269-c712-4751-a587-2c7fd1b972ec.mock.pstmn.io/products")
+        axios.get("gi")
         .then(function(result){
             const products = result.data.products;
             setProducts(products);
         })
         .catch(function(error){
-            console.error("에러 발생 : ", error);
+            console.error("에러 발생 코드 : ", error);
         }); 
     }, []);
 
